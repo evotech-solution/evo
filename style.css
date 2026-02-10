@@ -1,0 +1,1077 @@
+/* Base Styles from index.html */
+body {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0a0a0f;
+    --surface: #13131a;
+    --text-primary: #f4f4f5;
+    --accent-primary: #6366f1;
+    --accent-secondary: #22d3ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.font-display {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Animated Gradient Background */
+.hero-gradient {
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.3), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(34, 211, 238, 0.15), transparent),
+        radial-gradient(ellipse 50% 30% at 20% 80%, rgba(168, 85, 247, 0.2), transparent);
+    animation: gradientShift 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(30deg);
+    }
+}
+
+/* Floating Orbs */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(99, 102, 241, 0.4);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(34, 211, 238, 0.3);
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.orb-3 {
+    width: 250px;
+    height: 250px;
+    background: rgba(168, 85, 247, 0.3);
+    bottom: 10%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -30px) scale(1.05);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+}
+
+/* Grid Pattern */
+.grid-pattern {
+    background-image:
+        linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* Text Animations */
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+.delay-700 {
+    animation-delay: 0.7s;
+}
+
+.delay-800 {
+    animation-delay: 0.8s;
+}
+
+.delay-900 {
+    animation-delay: 0.9s;
+}
+
+/* Glowing Text */
+.glow-text {
+    text-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+    border: 2px solid rgba(99, 102, 241, 0.5);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: #6366f1;
+    transform: translateY(-3px);
+}
+
+/* Navigation */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #22d3ee);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #22d3ee;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background: #22d3ee;
+}
+
+.nav-link.active {
+    color: #22d3ee;
+}
+
+/* Tech Stack Icons */
+.tech-icon {
+    transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: #22d3ee;
+}
+
+/* Section Title */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #22d3ee);
+    border-radius: 2px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Stats Counter */
+.stat-card {
+    background: rgba(19, 19, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(19, 19, 26, 0.6);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    transition: 0.6s;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.2);
+}
+
+/* Social Links */
+.social-link {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    color: #22d3ee;
+}
+
+/* Particle effect */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(99, 102, 241, 0.6);
+    border-radius: 50%;
+    animation: particleFloat 15s infinite linear;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100%) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100%) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Avatar Ring Animation */
+.avatar-ring {
+    animation: ringPulse 3s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4),
+            0 0 0 0 rgba(34, 211, 238, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px rgba(99, 102, 241, 0),
+            0 0 0 30px rgba(34, 211, 238, 0);
+    }
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    background: rgba(19, 19, 26, 0.6);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+}
+
+.portfolio-card-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(34, 211, 238, 0.2));
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: rgba(99, 102, 241, 0.3);
+}
+
+.portfolio-card:hover .portfolio-card-image {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(34, 211, 238, 0.4));
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Line animation */
+.line-animation {
+    background: linear-gradient(90deg, transparent, #6366f1, transparent);
+    animation: slideRight 3s ease-in-out infinite;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Section spacing */
+section {
+    padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .orb-1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .orb-2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .orb-3 {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: rgba(19, 19, 26, 0.8);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-5px);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(34, 211, 238, 0.05));
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent);
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 10, 15, 0.9);
+    border-top: 1px solid rgba(99, 102, 241, 0.1);
+    padding: 40px 0 20px;
+}
+
+/* User Image Frame */
+.image-frame {
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(34, 211, 238, 0.5));
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-frame img {
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+}
+
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, rgba(255, 255, 255, 0.3), transparent 30%);
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Bottom Navbar */
+/* Old Mobile Nav Removed */
+
+/* Old Mobile Nav Item Removed */
+
+/* Adjust padding for bottom nav */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 90px;
+    }
+}
+
+/* User Image Frame */
+.image-frame {
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(34, 211, 238, 0.5));
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.image-frame::after {
+    /* Animated Background for Transparent Image */
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: radial-gradient(circle at 50% 50%, #1f1f2e, #0a0a0f);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+/* The rotating glow behind the image */
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, rgba(255, 255, 255, 0.3), transparent 30%);
+    animation: rotate 4s linear infinite;
+    z-index: -2;
+}
+
+.image-frame img {
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    /* Sit above the background */
+
+    /* Optional: Add a subtle glow to the image itself */
+    filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3));
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Bottom Navbar */
+/* Old Mobile Nav Removed */
+
+.timeline-item:last-child::before {
+    height: 0;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+/* 
+=============================================
+   Custom Animation System (replacing AOS)
+=============================================
+*/
+
+/* Base transition for all animated elements */
+[data-aos] {
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    will-change: transform, opacity;
+}
+
+/* 
+=============================================
+   Custom Animation System (replacing AOS)
+=============================================
+*/
+
+/* Base transition for all animated elements */
+[data-aos] {
+    opacity: 0;
+    /* Custom Bezier for "Premium" Smoothness */
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+/* Active state (triggered by IntersectionObserver) */
+[data-aos].active {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Animation Types */
+[data-aos="fade-up"] {
+    transform: translateY(30px);
+}
+
+[data-aos="fade-down"] {
+    transform: translateY(-30px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(30px);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-30px);
+}
+
+[data-aos="zoom-in"] {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+/* Delays */
+[data-aos-delay="100"] {
+    transition-delay: 0.1s;
+}
+
+[data-aos-delay="200"] {
+    transition-delay: 0.2s;
+}
+
+[data-aos-delay="300"] {
+    transition-delay: 0.3s;
+}
+
+[data-aos-delay="400"] {
+    transition-delay: 0.4s;
+}
+
+[data-aos-delay="500"] {
+    transition-delay: 0.5s;
+}
+
+[data-aos-delay="600"] {
+    transition-delay: 0.6s;
+}
+
+[data-aos-delay="700"] {
+    transition-delay: 0.7s;
+}
+
+[data-aos-delay="800"] {
+    transition-delay: 0.8s;
+}
+
+[data-aos-delay="900"] {
+    transition-delay: 0.9s;
+}
+
+[data-aos-delay="1000"] {
+    transition-delay: 1.0s;
+}
+
+
+/*
+=============================================
+   New Components & Animations
+=============================================
+*/
+
+/* Marquee Animation */
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Floating Animation */
+.animate-float {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Filter Buttons */
+.btn-filter.active {
+    background-color: rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+    color: white;
+}
+
+/* 
+=============================================
+   Custom Cursor
+=============================================
+*/
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent-secondary);
+    }
+
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--accent-secondary);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+    }
+
+    /* Hover States */
+    body.hovering .cursor-outline {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(34, 211, 238, 0.1);
+        border-color: transparent;
+    }
+}
+
+/* 
+=============================================
+   Liquid Mobile Navigation
+=============================================
+*/
+/* 
+=============================================
+   Liquid Mobile Navigation
+=============================================
+*/
+.mobile-bottom-nav {
+    display: flex;
+    height: 80px;
+    /* Increased height for better interaction */
+    background: var(--surface);
+    border-top: none;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+    /* Softer shadow */
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    justify-content: center;
+    padding: 0 10px;
+    overflow: visible;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    /* Ensure it stays on top */
+}
+
+.mobile-nav-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    /* Limit width on tablets */
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mobile-nav-item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav-item i {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--text-primary);
+    opacity: 0.5;
+}
+
+.mobile-nav-item.active i {
+    transform: translateY(-32px);
+    opacity: 1;
+    color: var(--accent-secondary);
+}
+
+/* The Moving Indicator */
+.mobile-nav-indicator {
+    position: absolute;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    background: var(--surface);
+    border-radius: 50%;
+    border: 6px solid var(--bg-primary);
+    transition: 0.5s;
+    z-index: 1;
+    /* Box shadow fallback for curve */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Circles for smoothing the curve (The Liquid Effect) */
+.mobile-nav-indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--bg-primary);
+}
+
+.mobile-nav-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--bg-primary);
+}
+
+/* Glowing ball inside */
+.indicator-light {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+/* 
+=============================================
+   Noise Texture Overlay (Premium Feel)
+=============================================
+*/
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    /* Below cursor, above content */
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 
+=============================================
+   Advanced Animations (Text Reveal)
+=============================================
+*/
+
+.reveal-text {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.reveal-text span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-text.active span {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Add stagger delay via nth-child if characters are split, 
+   or just use delay classes for words/headers */
+
+.stagger-1 {
+    transition-delay: 0.1s;
+}
+
+.stagger-2 {
+    transition-delay: 0.2s;
+}
+
+.stagger-3 {
+    transition-delay: 0.3s;
+}
+
+/* 
+   Magnetic Button Effect (Simulated via transform transition)
+   Note: True magnetic button needs JS, but we can fake a nice hover lift with the new bezier 
+*/
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-4px) scale(1.02);
+    /* Use the new smooth curve */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}

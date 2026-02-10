@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio & About | Arian - Web Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+  <!-- Mobile Bottom Navigation (Removed Duplicate) -->
+
+  <div class="fixed inset-0 z-[-1]">
+    <div class="absolute inset-0 bg-[#0a0a0f]"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="relative z-10">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-[#0a0a0f]/80 border-b border-white/5 top-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-2">
+              <img src="logo.png" alt="Arian Logo" class="h-10 w-auto">
+              <span class="font-display font-bold text-xl tracking-tight">Arian</span>
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html"
+              class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Home</a>
+            <a href="portfolio.html"
+              class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors active">Portfolio</a>
+            <a href="skills.html"
+              class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Skills</a>
+            <a href="contact.html"
+              class="btn-primary px-6 py-2.5 rounded-full text-sm font-medium text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all">Let's
+              Talk</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header / About Section -->
+    <section class="pt-32 pb-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h1 class="font-display text-4xl md:text-6xl font-bold mb-6">About <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Me</span></h1>
+            <h2 class="text-2xl font-medium text-gray-300 mb-6">Building the Future of Web</h2>
+            <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+              I am Arian, a dedicated Static Website Developer and Django Web Developer based in Lahore, Pakistan. With
+              over 1 year of professional experience and a degree from Superior University, I have successfully
+              delivered projects for 5+ clients.
+            </p>
+            <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+              My expertise lies in creating fast, responsive static websites and powerful, data-driven web applications
+              using Django. I also bring a creative edge with my graphic design skills using Canva.
+            </p>
+
+            <div class="flex gap-6 mb-8">
+              <div>
+                <span class="block text-3xl font-bold text-indigo-400"><span class="counter-stat"
+                    data-target="1">0</span>+</span>
+                <span class="text-sm text-gray-500">Years Exp.</span>
+              </div>
+              <div>
+                <span class="block text-3xl font-bold text-cyan-400"><span class="counter-stat"
+                    data-target="5">0</span>+</span>
+                <span class="text-sm text-gray-500">Clients</span>
+              </div>
+              <div>
+                <span class="block text-3xl font-bold text-purple-400"><span class="counter-stat"
+                    data-target="100">0</span>%</span>
+                <span class="text-sm text-gray-500">Satisfaction</span>
+              </div>
+            </div>
+
+            <a href="#portfolio"
+              class="btn-primary px-8 py-3 rounded-full text-base font-semibold text-white inline-flex items-center gap-2">
+              See My Work <i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+
+          <div class="relative" data-aos="fade-left">
+            <div <div
+              class="image-frame w-full aspect-[3/4] transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <!-- Replace 'user-image.png' with your actual image file -->
+              <img src="myimg.jpg" alt="Arian" class="w-full h-full object-cover rounded-2xl">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-[#13131a]/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-4xl font-bold mb-4 text-center" data-aos="fade-up">My <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Portfolio</span></h2>
+        <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Selected
+          projects that showcase my skills in static and dynamic web development.</p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="200">
+          <button
+            class="btn-filter px-6 py-2 rounded-full text-sm font-medium active transition-all border border-indigo-500/30 bg-indigo-500/10 text-white"
+            data-filter="all">All</button>
+          <button
+            class="btn-filter px-6 py-2 rounded-full text-sm font-medium text-gray-400 transition-all border border-gray-700 hover:border-indigo-500/50 hover:text-indigo-400"
+            data-filter="static">Static Websites</button>
+          <button
+            class="btn-filter px-6 py-2 rounded-full text-sm font-medium text-gray-400 transition-all border border-gray-700 hover:border-cyan-500/50 hover:text-cyan-400"
+            data-filter="django">Django Apps</button>
+          <button
+            class="btn-filter px-6 py-2 rounded-full text-sm font-medium text-gray-400 transition-all border border-gray-700 hover:border-purple-500/50 hover:text-purple-400"
+            data-filter="design">Graphic Design</button>
+        </div>
+
+        <div id="portfolioGrid" class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="portfolio-card rounded-2xl overflow-hidden group" data-category="django" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="portfolio-card-image h-64 relative">
+              <i class="fas fa-shopping-bag text-5xl text-indigo-400/50"></i>
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="#" class="btn-primary px-6 py-2 rounded-full text-sm text-white">View Project</a>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-display font-semibold text-2xl mb-2">E-Commerce Platform</h3>
+              <p class="text-gray-400 mb-4">A fully functional online store built with Django. Features include user
+                authentication, product management, and secure checkout.</p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs">Django</span>
+                <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs">Python</span>
+                <span class="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-xs">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="portfolio-card rounded-2xl overflow-hidden group" data-category="static" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="portfolio-card-image h-64 relative">
+              <i class="fas fa-building text-5xl text-cyan-400/50"></i>
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="#" class="btn-primary px-6 py-2 rounded-full text-sm text-white">View Project</a>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-display font-semibold text-2xl mb-2">Corporate Website</h3>
+              <p class="text-gray-400 mb-4">High-performance static website for a business client. SEO optimized with
+                smooth animations and responsive design.</p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 text-xs">HTML5</span>
+                <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">CSS3</span>
+                <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="portfolio-card rounded-2xl overflow-hidden group" data-category="django" data-aos="fade-up"
+            data-aos-delay="400">
+            <div class="portfolio-card-image h-64 relative">
+              <i class="fas fa-blog text-5xl text-purple-400/50"></i>
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="#" class="btn-primary px-6 py-2 rounded-full text-sm text-white">View Project</a>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-display font-semibold text-2xl mb-2">Personal Blog</h3>
+              <p class="text-gray-400 mb-4">A dynamic blog application allowing content management and user comments.
+              </p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs">Django</span>
+                <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="portfolio-card rounded-2xl overflow-hidden group" data-category="static" data-aos="fade-up"
+            data-aos-delay="500">
+            <div class="portfolio-card-image h-64 relative">
+              <i class="fas fa-id-card text-5xl text-pink-400/50"></i>
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a href="#" class="btn-primary px-6 py-2 rounded-full text-sm text-white">View Project</a>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-display font-semibold text-2xl mb-2">Portfolio Website</h3>
+              <p class="text-gray-400 mb-4">A personal portfolio website (like this one) showcasing skills and projects
+                with a modern UI.</p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs">AOS Animations</span>
+                <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">Tailwind</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Case Study -->
+    <section class="py-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <span class="text-indigo-400 font-bold tracking-wider text-sm mb-2 block">FEATURED CASE STUDY</span>
+            <h2 class="font-display text-4xl font-bold mb-6">Revamping <span class="text-white">TechFlow's</span>
+              Digital Presence</h2>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              TechFlow needed a complete overhaul of their legacy website. I rebuilt their platform using Django,
+              improving load times by 40% and implementing a custom CMS for easy content updates.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-green-400"></i>
+                <span class="text-gray-300">40% Faster Load Times</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-green-400"></i>
+                <span class="text-gray-300">Responsive Mobile Design</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-green-400"></i>
+                <span class="text-gray-300">Custom Content Management</span>
+              </div>
+            </div>
+            <a href="#"
+              class="btn-primary px-8 py-3 rounded-full text-base font-semibold text-white inline-flex items-center gap-2">
+              Read Full Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="relative" data-aos="fade-left">
+            <div class="relative rounded-2xl overflow-hidden border border-gray-700 shadow-2xl">
+              <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-cyan-500/20 mix-blend-overlay z-10">
+              </div>
+              <!-- Placeholder for case study image -->
+              <div class="bg-[#1f1f2e] aspect-video flex items-center justify-center">
+                <i class="fas fa-laptop-code text-6xl text-gray-600"></i>
+              </div>
+            </div>
+            <!-- Floating stats card -->
+            <div
+              class="absolute -bottom-6 -left-6 bg-[#13131a] p-6 rounded-xl border border-gray-700 shadow-xl z-20 animate-float">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <i class="fas fa-chart-line text-green-400"></i>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-xs">Traffic Increase</p>
+                  <p class="text-xl font-bold text-white">+150%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-20 bg-[#13131a]/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-500 font-medium mb-10 tracking-widest uppercase text-sm">Trusted By Innovative Companies</p>
+        <div class="flex flex-wrap justify-center gap-12 md:gap-20 items-center opacity-70">
+          <div class="text-2xl font-bold text-gray-400 flex items-center gap-2 hover:text-white transition-colors"
+            data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-mountain"></i> Summit
+          </div>
+          <div class="text-2xl font-bold text-gray-400 flex items-center gap-2 hover:text-white transition-colors"
+            data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-cube"></i> BoxLink
+          </div>
+          <div class="text-2xl font-bold text-gray-400 flex items-center gap-2 hover:text-white transition-colors"
+            data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-globe"></i> GlobalTech
+          </div>
+          <div class="text-2xl font-bold text-gray-400 flex items-center gap-2 hover:text-white transition-colors"
+            data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-bolt"></i> FastNet
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 bg-[#0a0a0f] pb-24 md:pb-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center gap-2 mb-4">
+              <img src="logo.png" alt="Arian Logo" class="h-8 w-auto">
+              <span class="font-display font-semibold text-lg">Arian</span>
+            </div>
+            <p class="text-gray-400 text-sm max-w-sm">Static Website Developer & Django Web Developer.</p>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold mb-4">Links</h3>
+            <div class="space-y-2">
+              <a href="index.html" class="text-gray-400 text-sm hover:text-indigo-400 transition-colors block">Home</a>
+              <a href="portfolio.html"
+                class="text-gray-400 text-sm hover:text-indigo-400 transition-colors block">Portfolio</a>
+              <a href="skills.html"
+                class="text-gray-400 text-sm hover:text-indigo-400 transition-colors block">Skills</a>
+              <a href="contact.html"
+                class="text-gray-400 text-sm hover:text-indigo-400 transition-colors block">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold mb-4">Contact</h3>
+            <div class="space-y-2">
+              <a href="mailto:arian@example.com"
+                class="text-gray-400 text-sm hover:text-indigo-400 transition-colors flex items-center gap-2"> <i
+                  class="fas fa-envelope"></i> Email Me </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center md:text-left">
+          <p class="text-gray-500 text-sm">© 2026 Arian. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav md:hidden">
+      <div class="mobile-nav-container">
+        <a href="index.html" class="mobile-nav-item">
+          <i class="fas fa-home"></i>
+        </a>
+        <a href="portfolio.html" class="mobile-nav-item active">
+          <i class="fas fa-briefcase"></i>
+        </a>
+        <a href="skills.html" class="mobile-nav-item">
+          <i class="fas fa-code"></i>
+        </a>
+        <a href="blog.html" class="mobile-nav-item">
+          <i class="fas fa-pen-nib"></i>
+        </a>
+        <a href="contact.html" class="mobile-nav-item">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <div class="mobile-nav-indicator">
+          <div class="indicator-light"></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
